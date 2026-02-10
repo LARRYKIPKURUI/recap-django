@@ -117,3 +117,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / 'static_files'  # Main Directory That will be automatically created
+
+# List dirs from static for all apps , its only one so far since I have one app
+STATICFILES_DIRS = [BASE_DIR / 'main_app/static']  #each app in the project
+
+# After All Static configuration run --> python manage.py collectstatic
